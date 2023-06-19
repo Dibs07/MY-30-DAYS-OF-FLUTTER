@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -6,17 +7,11 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
+  final count = 1000;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Material(
-        child: Center(
-         child: Container(
-            child: Text("I love flutter"),
-          ),
-        ),
-      ),
+    return const MaterialApp(
+      home: Homepage(),
     );
   }
 }
