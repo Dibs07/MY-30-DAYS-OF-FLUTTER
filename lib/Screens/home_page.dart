@@ -9,7 +9,15 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Catalog"),
+        //backgroundColor: Colors.white,
+        //elevation: 0.0,
+        iconTheme: const IconThemeData(color: Colors.black),
+        title: const Text(
+          "MyCatalog",
+          //style: TextStyle(
+          //color: Colors.black,
+          // ),
+        ),
         centerTitle: true,
       ),
       body: Center(

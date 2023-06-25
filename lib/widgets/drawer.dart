@@ -10,7 +10,7 @@ class MyDrawer extends StatelessWidget {
         "https://e1.pxfuel.com/desktop-wallpaper/238/852/desktop-wallpaper-masque-luffy-smiling-luffy-smile-thumbnail.jpg";
     return Drawer(
       child: Container(
-        color: Colors.deepOrange,
+        color: const Color.fromARGB(255, 38, 38, 38),
         child: ListView(
           padding: const EdgeInsets.all(0),
           children: const [
@@ -19,7 +19,7 @@ class MyDrawer extends StatelessWidget {
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.all(0),
                 decoration: BoxDecoration(
-                  color: Colors.deepOrange,
+                  color: Color.fromARGB(255, 38, 38, 38),
                 ),
                 accountName: Text(
                   "Luffy",
