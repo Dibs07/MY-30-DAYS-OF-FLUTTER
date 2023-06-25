@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/drawer.dart';
+
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
   final count = 1000;
@@ -13,7 +15,7 @@ class Homepage extends StatelessWidget {
       body: Center(
         child: Text("I love flutter $count"),
       ),
-      drawer: const Drawer(),
+      drawer: const MyDrawer(),
     );
   }
 }
