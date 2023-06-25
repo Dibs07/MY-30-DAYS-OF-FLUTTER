@@ -6,7 +6,10 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Catalog")),
+      appBar: AppBar(
+        title: const Text("Catalog"),
+        centerTitle: true,
+      ),
       body: Center(
         child: Text("I love flutter $count"),
       ),
