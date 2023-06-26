@@ -49,7 +49,47 @@ class _HomepageState extends State<Homepage> {
       body: Padding(
         padding: const EdgeInsets.all(18.0),
         child: (CatalogModel.items != null)
-            ? ListView.builder(
+            ? GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 20,
+                  crossAxisSpacing: 20,
+                ),
+                itemBuilder: (context, index) {
+                  final item = CatalogModel.items[index];
+                  return Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    child: GridTile(
+                      header: Container(
+                        padding: const EdgeInsets.all(10),
+                        color: Colors.deepPurpleAccent,
+                        child: Text(
+                          item.name,
+                          style: const TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      footer: Container(
+                        padding: const EdgeInsets.all(10),
+                        color: Colors.black,
+                        child: Text(
+                          item.price.toString(),
+                          style: const TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      child: Image.network(item.image),
+                    ),
+                  );
+                },
+                itemCount: CatalogModel.items.length,
+              )
+
+            /*ListView.builder(
                 itemBuilder: (context, index) {
                   return ItemWidget(
                     item: CatalogModel.items[index],
@@ -58,7 +98,7 @@ class _HomepageState extends State<Homepage> {
                 },
                 itemCount: CatalogModel.items.length,
                 //itemCount: dummylist.length,
-              )
+              )*/
             : const Center(
                 child: CircularProgressIndicator(),
               ),
